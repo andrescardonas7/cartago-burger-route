@@ -1,0 +1,74 @@
+# CI/CD Pipeline para Cartago Burger Route
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  # Job para verificar la calidad del código
+  code-quality:
+    runs-on: ubuntu-latest
+    name: Code Quality Check
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Este job se activará cuando definamos las tecnologías
+      # Por ahora solo verifica que los archivos básicos existan
+      - name: Verify project structure
+        run: |
+          echo "✅ Verificando estructura del proyecto..."
+          ls -la
+          echo "✅ README.md existe: $(test -f README.md && echo 'Sí' || echo 'No')"
+          echo "✅ .gitignore existe: $(test -f .gitignore && echo 'Sí' || echo 'No')"
+          echo "✅ Datos Excel existen: $(test -f UBICACION_HAMBURGUESAS.xlsx && echo 'Sí' || echo 'No')"
+
+  # Job placeholder para build (se activará con las tecnologías)
+  build:
+    runs-on: ubuntu-latest
+    name: Build Project
+    needs: code-quality
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build placeholder
+        run: |
+          echo "🚧 Build job configurado - se activará cuando se definan las tecnologías"
+          echo "📋 Stack tecnológico: Por definir"
+
+  # Job placeholder para tests
+  test:
+    runs-on: ubuntu-latest
+    name: Run Tests
+    needs: build
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Test placeholder
+        run: |
+          echo "🧪 Tests configurados - se activarán cuando se definan las tecnologías"
+          echo "✅ Estructura del proyecto verificada"
+
+  # Job placeholder para deploy
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy to GitHub Pages
+    needs: [build, test]
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy placeholder
+        run: |
+          echo "🚀 Deploy configurado - se activará cuando se definan las tecnologías"
+          echo "🌐 Target: GitHub Pages"

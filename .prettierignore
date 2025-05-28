@@ -1,0 +1,46 @@
+# Dependencias
+node_modules/
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+
+# Logs
+*.log
+
+# Archivos de configuración que pueden tener formato específico
+.env*
+*.min.js
+*.min.css
+
+# Assets binarios
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.webp
+*.svg
+*.ico
+*.woff
+*.woff2
+*.ttf
+*.eot
+
+# Git
+.git/
+
+# Datos Excel originales
+*.xlsx
+*.xls
+
+# Coverage reports
+coverage/
+
+# Temp files
+*.tmp
+*.temp 
