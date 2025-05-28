@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { BurgerPlace } from '../data/normalizedBurgers'
+import { NormalizedBurgerPlace as BurgerPlace } from '../data/normalizedBurgers'
 
 interface PlaceCardProps {
   place: BurgerPlace

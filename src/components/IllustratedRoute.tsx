@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import { motion } from 'framer-motion'
-import { normalizedBurgers } from '../data/normalizedBurgers'
+import { burgerPlaces as normalizedBurgers } from '../data/normalizedBurgers'
 import { shuffleArray } from '../utils/spiralPath'
 import { useRouteStore } from '../stores/routeStore'
 import PathCanvas from './PathCanvas'
