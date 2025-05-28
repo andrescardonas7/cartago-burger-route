@@ -158,7 +158,6 @@ export default function AnimatedBurger({
               }}
               transition={{ type: "spring", stiffness: 100, damping: 20 }}
               initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
             >
               <rect
                 x="-40"
