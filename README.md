@@ -13,7 +13,6 @@ Este proyecto presenta una experiencia web moderna y minimalista para explorar l
 - 🎨 Interfaz moderna y minimalista
 - 🔍 Sistema de filtros y búsqueda
 - 📍 Información detallada de cada establecimiento
-- 🌙 Modo oscuro/claro
 - ⚡ Carga rápida y optimizada
 
 ## 🛠️ Tecnologías
